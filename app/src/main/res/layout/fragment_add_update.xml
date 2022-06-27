@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.employee_management.AddUpdateFragment">
+
+    <TextView
+        android:id="@+id/txt_add_employee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/my_color"
+        android:text="Thêm nhân viên"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textAllCaps="true"
+        android:padding="10dp"/>
+    <TextView
+        android:id="@+id/ic_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:background="@drawable/ic_back_50"
+        android:layout_margin="10dp"/>
+    <ImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/icon_person"
+        app:layout_constraintTop_toBottomOf="@+id/txt_add_employee"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"/>
+    <EditText
+        android:id="@+id/edt_userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/img_avatar"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:hint="Nhập tên"
+        android:textSize="24dp"/>
+    <EditText
+        android:id="@+id/edt_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/edt_userName"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:hint="Nhập số điện thoại"
+        android:textSize="24dp"/>
+
+    <EditText
+        android:id="@+id/edt_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/edt_phone_number"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:hint="Click để chọn ngày"
+        android:textSize="24dp"
+        android:drawableEnd="@drawable/ic_baseline_calendar_month_45"
+        android:allowClickWhenDisabled="true"
+        />
+    <TextView
+        android:id="@+id/txt_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/edt_date"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="24dp"
+        android:text="Bộ phận:"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/black"/>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spn_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/my_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/txt_department"
+        app:layout_constraintTop_toBottomOf="@+id/edt_date" />
+
+    <RadioGroup
+        android:id="@+id/radio_gr_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txt_department"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="15dp">
+        <RadioButton
+            android:id="@+id/radio_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nam"
+            android:textSize="24sp"
+            android:buttonTint="@color/my_color"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/radio_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nữ"
+            android:textSize="24sp"
+            android:buttonTint="@color/my_color"
+            android:layout_marginLeft="20dp"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:background="@color/my_color"
+        android:text="lưu nhân viên"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_gr_gender"
+        app:layout_constraintVertical_bias="0.75"
+        tools:layout_editor_absoluteX="10dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
